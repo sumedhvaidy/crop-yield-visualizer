@@ -126,20 +126,6 @@ function App() {
             <button className="button" name="farm1" onClick={handleFarmChange}>Farm 1</button>
             <button className="button" name="farm2" onClick={handleFarmChange}>Farm 2</button>
             <button className="button" name="farm3" onClick={handleFarmChange}>Farm 3</button>
-            <p class="legend_text">Import a File</p>
-            <form onSubmit={handleSubmit}>
-              <label htmlFor="fileInput" className="fileInputButton">
-                Choose File
-              </label>
-              <input
-                id="fileInput"
-                type="file"
-                accept=".csv,.xlsx,.pdf" // Limit file types to only allow CSV, XLSX, and PDF files
-                onChange={handleFileInputChange}
-              />
-              {selectedFile && <p>Selected file: {selectedFile.name}</p>}
-              {/* <button className="submit">Submit</button> */}
-            </form>
           </div>
 
           <div className="button-group">

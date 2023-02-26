@@ -50,7 +50,7 @@ function Navbar() {
                     </form>
                 </a>
                 </li>
-                <li className><a href="https://github.com/sumedhvaidy/crop-yield-visualizer">Github</a></li>
+                <li className><a href="https://github.com/sumedhvaidy/crop-yield-visualizer">GitHub</a></li>
             </ul>
         </nav>
     );
