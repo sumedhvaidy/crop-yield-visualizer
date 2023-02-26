@@ -1,19 +1,39 @@
 .App {
   text-align: center;
+  margin: 20px;
 }
 
 .fileInputButton {
   display: inline-block;
-  padding: 12px 24px;
+  /* padding: 5px 5px 5px 5px; */
   background-color: #4CAF50;
   color: white;
   font-size: 16px;
   border-radius: 4px;
   cursor: pointer;
+  max-width: 150px;
+  padding: 10px 10px;
+  /* padding: 5px 5px 5px 5px; */
 }
 
 .fileInputButton:hover {
   background-color: #3e8e41;
+}
+
+.submit {
+  display: inline-block;
+  padding: 5px 5px 5px 5px;
+  background-color: #52b8f8;
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+
+}
+
+.submit:hover {
+  background-color: #009dff;
 }
 
 input[type="file"] {
@@ -21,16 +41,19 @@ input[type="file"] {
 }
 
 .grid-overlay-container {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 80%; */
+  padding-top: 30px;
+  padding-bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
+  /* border: 2px solid red; */
 }
 
 .image-container {
 
-  width: 70%;
+  width: 50%;
   height: 50%;
   position: relative;
 
@@ -124,7 +147,7 @@ input[type="file"] {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-100%, -100%);
   font-family: Arial, sans-serif;
   font-size: 24px;
   font-weight: bold;
@@ -133,6 +156,7 @@ input[type="file"] {
   padding: 8px 16px;
   border-radius: 4px;
   pointer-events: none;
+  width: 250%;
 }
 
 .grid-cell.hovered.left-half .text {
@@ -144,3 +168,101 @@ input[type="file"] {
   left: auto;
   right: -50px;
 }
+
+
+.button-group {
+  /* border: 2px solid blue; */
+  /* flex-direction: row; */
+  /* flex: 1;  */
+
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid red; */
+  /* text-align: right; */
+  /* justify-content: right; */
+}
+
+.button {
+  /* flex: 1; */
+  display: flex;
+  flex-direction: row;
+  /* width: 120px; */
+  max-width: 150px;
+  padding: 10px 20px;
+  margin: 5px 5px 5px 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  background-color: rgb(175, 124, 237);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+  
+}
+
+.button:hover {
+  background-color: rgb(142, 62, 240);
+}
+
+.sub-group {
+  display: flex;
+  flex-direction: row;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+  justify-content: center;
+}
+
+.hover-text {
+  font-size: 12px;
+}
+
+.Legend {
+  position: fixed;
+  right: 50px; bottom: 50px;
+}
+
+.legend_row {
+  flex-direction: row;
+  display: flex;
+}
+
+.legend_button {
+  height: 40px;
+  width: 40px;
+  margin: 0px 20px;
+}
+
+.legend_purple {
+  background-color: purple;
+  opacity: 0.4;
+}
+
+.legend_blue {
+  background-color: blue;
+  opacity: 0.4;
+}
+
+.legend_green {
+  background-color: green;
+  opacity: 0.4;
+}
+
+.legend_yellow {
+  background-color: yellow;
+  opacity: 0.4;
+}
+
+.legend_red {
+  background-color: red;
+  opacity: 0.4;
+}
+
+.legend_text {
+  text-align: center;
+}
+
