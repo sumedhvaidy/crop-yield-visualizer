@@ -1,7 +1,16 @@
 import logo from './logo.svg';
 import React, { useState } from 'react';
 import axios from 'axios';
+import Chance from 'chance';
 import './App.css';
+import farm1 from "./data/farm1";
+import MyImage from './dirt.PNG';
+const chance = new Chance();
+const sampleData = chance.n(() => {
+  return chance.integer({min: 1, max: 5})
+}, 100);
+
+
 
 function App() {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -60,24 +69,34 @@ function App() {
       <div className="grid-overlay-container">
         <div className="image-container">
           <img
-            src="https://th.bing.com/th/id/OIP.tAkNielolc9DbHjTsLzm0AHaJQ?pid=ImgDet&rs=1"
+            src={MyImage}
             alt="your-image-description"
             className="grid-overlay-image"
           />
           <div className="grid-overlay">
-            {[...Array(100)].map((_, index) => (
-              <div
+            {farm1.map((datum, index) => {
+              const keyMap = {
+                1: 'green',
+                2: 'blue',
+                3: 'orange',
+                4: 'purple',
+                5: 'white'
+              }
+              {console.log(datum.YIELDLBL)}
+              
+              const desiredColor = keyMap[datum.YIELDLBL];
+              return <div
                 key={index}
-                className={`grid-cell ${index < 13 ? 'green' : 'red'} ${index === hoveredSquare ? 'hovered' : ''
+                className={`grid-cell ${desiredColor} ${index === hoveredSquare ? 'hovered' : ''
                   }`}
                 onMouseEnter={() => handleSquareHover(index)}
                 onMouseLeave={() => handleSquareHover(null)}
               >
                 {index === hoveredSquare &&
-                  <div className="text">ABCD</div>}
+                  <div className="text">Seeding Applied Rate:{Math.round(datum.AppliedRate)}</div>}
               </div>
 
-            ))}
+                })}
           </div>
         </div>
       </div>
