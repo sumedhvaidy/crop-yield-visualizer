@@ -88,7 +88,11 @@ function App() {
               return <div
                 key={index}
                 className={`grid-cell ${desiredColor} ${index === hoveredSquare ? 'hovered' : ''
-                  }`}
+                } ${
+                  index < 50 && index % 10 < 5 ? "left-half" : ""
+                } ${
+                  index >= 50 && index % 10 >= 5 ? "right-half" : ""  
+                }`}
                 onMouseEnter={() => handleSquareHover(index)}
                 onMouseLeave={() => handleSquareHover(null)}
               >

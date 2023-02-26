@@ -89,12 +89,32 @@ input[type="file"] {
   opacity: 0.2;
 }
 
-.green {
+.grid-cell.green {
   background-color: green;
   opacity: 0.2;
 }
 
-.hovered {
+.grid-cell.blue {
+  background-color: blue;
+  opacity: 0.2;
+}
+
+.grid-cell.orange {
+  background-color: orange;
+  opacity: 0.2;
+}
+
+.grid-cell.purple {
+  background-color: purple;
+  opacity: 0.2;
+}
+
+.grid-cell.white {
+  background-color: white;
+  opacity: 0.2;
+}
+
+.grid-cell.hovered {
   background-color: #3498db;
   opacity: 0.8;
 
@@ -113,4 +133,14 @@ input[type="file"] {
   padding: 8px 16px;
   border-radius: 4px;
   pointer-events: none;
+}
+
+.grid-cell.hovered.left-half .text {
+  right: auto;
+  left: -50px;
+}
+
+.grid-cell.hovered.right-half .text {
+  left: auto;
+  right: -50px;
 }
