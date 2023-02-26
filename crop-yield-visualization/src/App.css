@@ -144,3 +144,43 @@ input[type="file"] {
   left: auto;
   right: -50px;
 }
+
+.Legend {
+  position: fixed;
+  right: 50px; bottom: 50px;
+}
+
+.legend_row {
+  flex-direction: row;
+  display: flex;
+}
+
+.legend_button {
+  height: 40px;
+  width: 40px;
+  margin: 20px 20px;
+}
+
+.legend_purple {
+  background-color: purple;
+}
+
+.legend_blue {
+  background-color: blue;
+}
+
+.legend_green {
+  background-color: green;
+}
+
+.legend_yellow {
+  background-color: yellow;
+}
+
+.legend_red {
+  background-color: red;
+}
+
+.legend_text {
+  text-align: center;
+}

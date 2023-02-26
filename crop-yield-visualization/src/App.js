@@ -70,6 +70,13 @@ function App() {
         <button name="farm3" onClick={handleFarmChange}>Farm 3</button>
         {/* <p>You clicked {farmDataset}</p> */}
       </div>
+      <div className="Legend">
+        <div className='legend_row'><button className='legend_purple legend_button' name="purple_label"></button><p class="legend_text" >0-57 bu/ac</p></div>
+        <div className='legend_row'><button className='legend_blue legend_button' name="blue_label"></button><p class="legend_text"> 58-83 bu/ac</p></div>
+        <div className='legend_row'><button className='legend_green legend_button' name="green_label"></button><p class="legend_text">84-245 bu/ac</p></div>
+        <div className='legend_row'><button className='legend_yellow legend_button' name="yellow_label"></button><p class="legend_text">246-862 bu/ac</p></div>
+        <div className='legend_row'><button className='legend_red legend_button' name="red_label"></button><p class="legend_text">863-1666 bu/ac</p></div>
+      </div>
       <div className="App">
         <h1>Import a File</h1>
         <form onSubmit={handleSubmit}>
