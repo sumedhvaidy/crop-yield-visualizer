@@ -8,9 +8,10 @@ import farm2 from "./data/farm2";
 import farm3 from "./data/farm3";
 
 import MyImage from './dirt.PNG';
+import Navbar from './Navbar';
 const chance = new Chance();
 const sampleData = chance.n(() => {
-  return chance.integer({min: 1, max: 5})
+  return chance.integer({ min: 1, max: 5 })
 }, 100);
 
 
@@ -31,10 +32,10 @@ function App() {
   const handleFarmChange = (event) => {
     if (event.target.name == "farm1") {
       setFarmDataset(farm1)
-    }      
+    }
     else if (event.target.name == "farm2") {
       setFarmDataset(farm2)
-    } 
+    }
     else setFarmDataset(farm3)
 
   }
@@ -62,6 +63,7 @@ function App() {
 
   return (
     <div>
+      <Navbar />
       <div>
         <button name="farm1" onClick={handleFarmChange}>Farm 1</button>
         <button name="farm2" onClick={handleFarmChange}>Farm 2</button>
@@ -95,7 +97,7 @@ function App() {
             className="grid-overlay-image"
           />
           <div className="grid-overlay">
-            {{farmDataset}.farmDataset.map((datum, index) => {
+            {{ farmDataset }.farmDataset.map((datum, index) => {
               const keyMap = {
                 1: 'purple',
                 2: 'blue',
@@ -104,16 +106,14 @@ function App() {
                 5: 'red'
               }
               // {console.log(datum.YIELDLBL)}
-              
+
               const desiredColor = keyMap[datum.YIELDLBL];
               return <div
                 key={index}
                 className={`grid-cell ${desiredColor} ${index === hoveredSquare ? 'hovered' : ''
-                } ${
-                  index < 50 && index % 10 < 5 ? "left-half" : ""
-                } ${
-                  index >= 50 && index % 10 >= 5 ? "right-half" : ""  
-                }`}
+                  } ${index < 50 && index % 10 < 5 ? "left-half" : ""
+                  } ${index >= 50 && index % 10 >= 5 ? "right-half" : ""
+                  }`}
                 onMouseEnter={() => handleSquareHover(index)}
                 onMouseLeave={() => handleSquareHover(null)}
               >
@@ -121,7 +121,7 @@ function App() {
                   <div className="text">Seeding Applied Rate:{Math.round(datum.AppliedRate)}</div>}
               </div>
 
-                })}
+            })}
           </div>
         </div>
       </div>
