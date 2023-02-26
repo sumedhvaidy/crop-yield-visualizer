@@ -19,3 +19,47 @@
 input[type="file"] {
   display: none;
 }
+
+.grid-overlay-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  width: 30%;
+  height: 50%;
+  position: relative;
+}
+
+.grid-overlay-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-gap: 1px;
+}
+
+.grid-cell {
+  background-color: red;
+  opacity: 0.3;
+}
+
+.green {
+  background-color: blue;
+  opacity: 0.1;
+}
