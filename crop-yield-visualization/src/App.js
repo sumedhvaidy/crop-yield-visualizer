@@ -118,9 +118,12 @@ function App() {
                 onMouseLeave={() => handleSquareHover(null)}
               >
                 {index === hoveredSquare &&
-                  <div className="text">Seeding Applied Rate:{Math.round(datum.AppliedRate)}</div>}
+                  <div className="text">
+                      <p>Seeding Applied Rate:{Math.round(datum.AppliedRate)} seeds / acre</p>
+                      <p>Elevation:{Math.round(datum.Elevation)} ft </p>
+                      <p>Moisture: {Math.round(datum.Moisture)} %</p>
+                  </div>}
               </div>
-
             })}
           </div>
         </div>
