@@ -36,3 +36,20 @@
 .navbar__links li a:hover {
     color: #333;
 }
+
+.fileInputButton {
+    display: inline-block;
+    /* padding: 5px 5px 5px 5px; */
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+        border-radius: 4px;
+    /*padding: 10px 10px;*/
+    cursor: pointer;
+    max-width: 150px;
+    /* padding: 5px 5px 5px 5px; */
+}
+
+.fileInputButton:hover {
+    background-color: #3e8e41;
+}
