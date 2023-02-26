@@ -59,15 +59,22 @@ function App() {
       </div>
       <div className="grid-overlay-container">
         <div className="image-container">
-          <img src="https://th.bing.com/th/id/OIP.tAkNielolc9DbHjTsLzm0AHaJQ?pid=ImgDet&rs=1" alt="your-image-description" className="grid-overlay-image" />
+          <img
+            src="https://th.bing.com/th/id/OIP.tAkNielolc9DbHjTsLzm0AHaJQ?pid=ImgDet&rs=1"
+            alt="your-image-description"
+            className="grid-overlay-image"
+          />
           <div className="grid-overlay">
             {[...Array(100)].map((_, index) => (
-              <div key={index} className={`grid-cell ${index < 13 ? 'green' : 'red'} ${index === hoveredSquare ? 'hovered' : ''
-                }`}
+              <div
+                key={index}
+                className={`grid-cell ${index < 13 ? 'green' : 'red'} ${index === hoveredSquare ? 'hovered' : ''
+                  }`}
                 onMouseEnter={() => handleSquareHover(index)}
                 onMouseLeave={() => handleSquareHover(null)}
               >
-                {index === hoveredSquare && <div className="text">ABCD</div>}
+                {index === hoveredSquare &&
+                  <div className="text">ABCD</div>}
               </div>
 
             ))}
